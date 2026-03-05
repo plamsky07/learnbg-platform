@@ -1,0 +1,28 @@
+service: learnbg-api
+
+frameworkVersion: '4'
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: eu-central-1
+  stage: dev
+  environment:
+    APP_NAME: learnbg-platform
+
+plugins:
+  - serverless-offline
+
+functions:
+  health:
+    handler: src/handlers/health.handler
+    events:
+      - httpApi:
+          method: GET
+          path: /health
+  authInfo:
+    handler: src/handlers/authInfo.handler
+    events:
+      - httpApi:
+          method: GET
+          path: /auth/info

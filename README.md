@@ -1,13 +1,20 @@
 # LearnBG Platform
 
-New generation platform (production track).
+Production-track repository for the new LearnBG platform.
 
-## Stack
-- Frontend: React + Tailwind
-- Backend: Node.js (serverless-first)
-- Cloud: AWS (Lambda, Cognito, RDS, S3)
+## Tech
+- Frontend: React + Tailwind (Vite)
+- Backend: Node.js serverless handlers (AWS Lambda)
+- Cloud: AWS (S3, RDS, Lambda, Cognito)
 
-## Branch Strategy
-- main: production
-- develop: active development
-- feature/*: isolated features
+## Branching
+- `main`: production
+- `develop`: active integration
+- `feature/*`: isolated feature delivery
+
+## Quick start
+```bash
+npm install
+npm run dev:frontend
+npm run dev:backend
+```
